@@ -8,6 +8,13 @@ import org.openqa.selenium.support.ui.Select;
 
 public class CommonMethods {
 
+	
+	public void selectValueInDropdown(WebElement ele, String option)
+	{
+		Select select = new Select(ele);
+		select.selectByValue(option);
+	}
+	
 	public List<String> getDropdownOptionsAsList(WebElement ele)
 	{
 		Select select = new Select(ele);
