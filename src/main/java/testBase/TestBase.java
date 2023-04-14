@@ -15,7 +15,7 @@ import reusableComponents.PropertiesOperations;
 
 public class TestBase extends ObjectRepo {
 
-	public static WebDriver driver;
+
 	@BeforeMethod
 	public void setupMethod() throws IOException
 	{

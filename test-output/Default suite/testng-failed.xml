@@ -6,7 +6,7 @@
       <class name="InsuranceCalculator_Motorcycle.ErrorHandlingCylinderCapacity_001">
         <methods>
           <include name="tearDown"/>
-          <include name="errorHandlingCylCap"/>
+          <include name="verifyModelOptionDropdown"/>
           <include name="setupMethod"/>
         </methods>
       </class> <!-- InsuranceCalculator_Motorcycle.ErrorHandlingCylinderCapacity_001 -->
