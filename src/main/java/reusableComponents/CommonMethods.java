@@ -15,6 +15,17 @@ public class CommonMethods {
 		select.selectByValue(option);
 	}
 	
+  public void SelectRadioButton(List<WebElement> elements,String option)
+  {
+	  for (WebElement ref : elements) 
+	  {
+		if(ref.getText().equalsIgnoreCase(option))
+				{
+			ref.click();
+				}
+	  }
+  }
+	
 	public List<String> getDropdownOptionsAsList(WebElement ele)
 	{
 		Select select = new Select(ele);
