@@ -15,7 +15,7 @@ public class CommonMethods {
 		select.selectByValue(option);
 	}
 	
-  public void SelectRadioButton(List<WebElement> elements,String option)
+  public void selectRadioButton(List<WebElement> elements,String option)
   {
 	  for (WebElement ref : elements) 
 	  {
@@ -24,6 +24,20 @@ public class CommonMethods {
 			ref.click();
 				}
 	  }
+  }
+  
+  public void selectCheckboxes(List<WebElement> elements, String options)
+  {
+	  String[] checkBoxValue= options.split(",");
+	  for (WebElement ele : elements) {
+		for (String ch : checkBoxValue) {
+			if(ele.getText().equalsIgnoreCase(ch))
+			{
+				ele.click();
+			}
+		}
+	}
+	  
   }
 	
 	public List<String> getDropdownOptionsAsList(WebElement ele)
