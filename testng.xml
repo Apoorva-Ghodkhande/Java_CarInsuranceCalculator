@@ -6,6 +6,7 @@
     <classes>
       <class name="testBase.TestBase"/>
       <class name="InsuranceCalculator_Motorcycle.ErrorHandlingCylinderCapacity_001"/>
+      <class name="InsuranceCalculator_Motorcycle.EndToEndTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

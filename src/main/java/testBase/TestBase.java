@@ -10,6 +10,9 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import pageObjects.EnterInsurantDataPageObject;
+import pageObjects.EnterProductDataPageObjects;
+import pageObjects.EnterVehicleDataPageObject;
 import pageObjects.HomePageObjects;
 import reusableComponents.PropertiesOperations;
 
@@ -21,6 +24,9 @@ public class TestBase extends ObjectRepo {
 	{
 		launchBrowser();
 		homePage=new HomePageObjects();
+		enterVehicleDataPage= new EnterVehicleDataPageObject();
+		enterInsurantDataPage=new EnterInsurantDataPageObject();
+		enterProductDataPage=new EnterProductDataPageObjects();
 	}
 	
 	public void launchBrowser() throws IOException {
@@ -38,6 +44,6 @@ public class TestBase extends ObjectRepo {
 	@AfterMethod
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 }
