@@ -1,5 +1,6 @@
 package pageObjects;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
@@ -32,12 +33,12 @@ public class EnterProductDataPageObjects extends ObjectRepo{
 	PageFactory.initElements(driver, this);
 	}
 	
-	public void enterProductData()
+	public void enterProductData(HashMap<String, String> testData)
 	{
-		tboxStartDate.sendKeys("06/01/2023");
-		cm.selectValueInDropdown(ddInsuranceSum, "3000000");
-		cm.selectValueInDropdown(ddDamageInsurance, "No Coverage");
-		cm.selectCheckboxes(checkBoxOptionalProducts, "Euro Protection");
+		tboxStartDate.sendKeys(testData.get("Product_startdate").toString());
+		cm.selectValueInDropdown(ddInsuranceSum, testData.get("Product_insurancesum"));
+		cm.selectValueInDropdown(ddDamageInsurance, testData.get("Product_damageinsurance"));
+		cm.selectCheckboxes(checkBoxOptionalProducts, testData.get("ProductOptional_Products"));
 		btnNext.click();	
 	}
 

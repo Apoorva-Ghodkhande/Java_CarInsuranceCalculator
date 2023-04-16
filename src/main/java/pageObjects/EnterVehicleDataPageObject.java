@@ -1,6 +1,7 @@
 package pageObjects;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
@@ -50,16 +51,16 @@ public class EnterVehicleDataPageObject extends ObjectRepo {
 	
 	}
 	
-	public void enterVehicleData()
+	public void enterVehicleData(HashMap<String, String> testData)
 	{
-		cm.selectValueInDropdown(ddMake, "BMW");
-		cm.selectValueInDropdown(ddModel, "Motorcycle");
-		tboxCylinderCapacity.sendKeys("1000");
-		tboxEnginePerformance.sendKeys("1111");
-		tboxDateofManufacture.sendKeys("03/10/2010");
-		cm.selectValueInDropdown(ddNumberOfSeatsMotorcycle, "2");
-		tboxListPrice.sendKeys("20000");
-		tboxAnnualMileage.sendKeys("200");
+		cm.selectValueInDropdown(ddMake, testData.get("Vehicle_Make"));
+		cm.selectValueInDropdown(ddModel, testData.get("Vehicle_Model"));
+		tboxCylinderCapacity.sendKeys(testData.get("Vehicle_CylinderCapacity"));
+		tboxEnginePerformance.sendKeys(testData.get("Vehicle_Engine Performance"));
+		tboxDateofManufacture.sendKeys(testData.get("Vehicle_Date of Manufacture").toString());
+		cm.selectValueInDropdown(ddNumberOfSeatsMotorcycle, testData.get("Vehicle_No of Seats_motorcycle"));
+		tboxListPrice.sendKeys(testData.get("Vehicle_ListPrice"));
+		tboxAnnualMileage.sendKeys(testData.get("Vehicle_Annual Mileage"));
 	    btnNextEnterInsurantdata.click();
 	}
 }

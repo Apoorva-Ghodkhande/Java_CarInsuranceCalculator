@@ -1,5 +1,6 @@
 package pageObjects;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
@@ -55,19 +56,19 @@ public class EnterInsurantDataPageObject extends ObjectRepo{
 	}
 	
 	
-	public void enterInsurantData()
+	public void enterInsurantData(HashMap<String, String> testData)
 	{
-		tBoxFirstName.sendKeys("aaaaa");
-		tBoxLastName.sendKeys("bbbbb");
-		tboxBirthDate.sendKeys("02/10/2000");
-		cm.selectRadioButton(radioGender, "Female");
-		tBoxStreetAddress.sendKeys("aa ss dd  ff  gg");
-		cm.selectValueInDropdown(ddCountry, "India");
-		tBoxZipCode.sendKeys("225364");
-        tBoxCity.sendKeys("Shimla");
-        cm.selectValueInDropdown(ddOccupation, "Employee");
-        cm.selectCheckboxes(checkBoxHobbies, "Speeding,Other");
-        tboxWebsite.sendKeys("zxc@gmail.com");
+		tBoxFirstName.sendKeys(testData.get("Insurant_FirstName"));
+		tBoxLastName.sendKeys(testData.get("Insurant_LastName"));
+		tboxBirthDate.sendKeys(testData.get("Insurant_birthdate").toString());
+		cm.selectRadioButton(radioGender, testData.get("Insurant_gender"));
+		tBoxStreetAddress.sendKeys("aaaa aaa a");
+		cm.selectValueInDropdown(ddCountry, testData.get("Insurant_country"));
+		tBoxZipCode.sendKeys(testData.get("Insurant_zipcode"));
+        tBoxCity.sendKeys("Mumbai");
+        cm.selectValueInDropdown(ddOccupation, testData.get("Insurant_occupation"));
+        cm.selectCheckboxes(checkBoxHobbies, testData.get("Insurant_Hobby"));
+        tboxWebsite.sendKeys("http://sampleapp.tricentis.com/101/app.php");
         btnNext.click();
 	}
 }

@@ -1,5 +1,7 @@
 package pageObjects;
 
+import java.util.HashMap;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,14 +20,14 @@ WebElement btnNext;
 	}
 	
 	
-	public String pricePerYearOfPlan(String plan)
+	public String pricePerYearOfPlan(HashMap<String, String> plan)
 	{
-		return driver.findElement(By.xpath("//table[@id='priceTable']/tbody/tr[1]/td[@data-label='"+plan+"']/span")).getText();
+		return driver.findElement(By.xpath("//table[@id='priceTable']/tbody/tr[1]/td[@data-label='"+plan.get("SelectOption")+"']/span")).getText();
 	}
 	
-	public void selectPlanOptionAndClickNext(String plan)
+	public void selectPlanOptionAndClickNext(HashMap<String, String> testData)
 	{
-		driver.findElement(By.xpath("//input[@name='Select Option' and @value='"+plan+"']/parent::label")).click();
+		driver.findElement(By.xpath("//input[@name='Select Option' and @value='"+testData.get("SelectOption")+"']/parent::label")).click();
 		btnNext.click();
 	}
 	

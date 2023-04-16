@@ -6,17 +6,10 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="InsuranceCalculator_Motorcycle.ErrorHandlingCylinderCapacity_001">
-        <methods>
-          <include name="tearDown"/>
-          <include name="verifyModelOptionDropdown"/>
-          <include name="setupMethod"/>
-        </methods>
-      </class> <!-- InsuranceCalculator_Motorcycle.ErrorHandlingCylinderCapacity_001 -->
       <class name="InsuranceCalculator_Motorcycle.EndToEndTest">
         <methods>
           <include name="tearDown"/>
-          <include name="InsuranceMotorcycle"/>
+          <include name="InsuranceMotorcycle" invocation-numbers="0 1 2"/>
           <include name="setupMethod"/>
         </methods>
       </class> <!-- InsuranceCalculator_Motorcycle.EndToEndTest -->
