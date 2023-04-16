@@ -13,16 +13,32 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 public class ExcelOperations {
 	
 	String filePath;
-	public ExcelOperations() throws Exception {
-	filePath=System.getProperty("user.dir")+PropertiesOperations.getValueForTheKey("Excelfilepath");
+	Sheet sh;
+	public ExcelOperations() {
+	try {
+		filePath=System.getProperty("user.dir")+PropertiesOperations.getValueForTheKey("Excelfilepath");
+	} catch (IOException e) {
+
+		e.printStackTrace();
+	}
+	File file=new File(filePath);
+	Workbook wb;
+	try {
+		wb = WorkbookFactory.create(file);
+	    sh=wb.getSheet("InsurancePremium");
+	} catch (EncryptedDocumentException e) {
+		e.printStackTrace();
+	} catch (IOException e) {
+
+		e.printStackTrace();
+	}
+
 	}
 	
 	
 	public HashedMap<String, String> getTestDataInMap(int rowNo) throws EncryptedDocumentException, IOException
 	{
-		File file=new File(filePath);
-		Workbook wb=WorkbookFactory.create(file);
-		Sheet sh=wb.getSheet("InsurancePremium");
+
 		HashedMap<String, String> mp=new HashedMap<>();
 		for (int i = 0; i < sh.getRow(0).getLastCellNum(); i++) {
 			mp.put(sh.getRow(0).getCell(i).toString(), sh.getRow(rowNo).getCell(i).toString());
@@ -31,11 +47,14 @@ public class ExcelOperations {
 		return mp;
 	}  
 	
-	
-public static void main(String[] args) throws Exception
-{
-	ExcelOperations ex= new ExcelOperations();
-	System.out.println(ex.getTestDataInMap(1));
+public int getRowCount() {
+	return sh.getLastRowNum();	
+}	
+
+
+
+public int getColumnCount() {
+return sh.getRow(0).getLastCellNum();
 }
 
 }
