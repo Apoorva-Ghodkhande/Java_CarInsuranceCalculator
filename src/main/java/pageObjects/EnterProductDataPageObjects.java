@@ -38,10 +38,7 @@ public class EnterProductDataPageObjects extends ObjectRepo{
 		cm.selectValueInDropdown(ddInsuranceSum, "3000000");
 		cm.selectValueInDropdown(ddDamageInsurance, "No Coverage");
 		cm.selectCheckboxes(checkBoxOptionalProducts, "Euro Protection");
-		btnNext.click();
-		
-
-		
+		btnNext.click();	
 	}
 
 

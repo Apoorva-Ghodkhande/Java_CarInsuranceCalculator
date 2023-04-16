@@ -1,25 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="3" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-15T18:05:09 IST" name="Default suite" finished-at="2023-04-15T18:05:29 IST" duration-ms="19575">
+  <suite started-at="2023-04-15T20:59:21 IST" name="Suite" finished-at="2023-04-15T21:00:57 IST" duration-ms="95494">
     <groups>
     </groups>
-    <test started-at="2023-04-15T18:05:09 IST" name="Default test" finished-at="2023-04-15T18:05:29 IST" duration-ms="19575">
+    <test started-at="2023-04-15T20:59:21 IST" name="Test" finished-at="2023-04-15T21:00:57 IST" duration-ms="95494">
       <class name="InsuranceCalculator_Motorcycle.EndToEndTest">
-        <test-method is-config="true" signature="setupMethod()[pri:0, instance:InsuranceCalculator_Motorcycle.EndToEndTest@5824a83d]" started-at="2023-04-15T18:05:09 IST" name="setupMethod" finished-at="2023-04-15T18:05:24 IST" duration-ms="14838" status="PASS">
+        <test-method is-config="true" signature="setupMethod()[pri:0, instance:InsuranceCalculator_Motorcycle.EndToEndTest@4b741d6d]" started-at="2023-04-15T20:59:59 IST" name="setupMethod" finished-at="2023-04-15T21:00:52 IST" duration-ms="52921" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupMethod -->
-        <test-method signature="InsuranceMotorcycle()[pri:0, instance:InsuranceCalculator_Motorcycle.EndToEndTest@5824a83d]" started-at="2023-04-15T18:05:24 IST" name="InsuranceMotorcycle" finished-at="2023-04-15T18:05:29 IST" duration-ms="4685" status="PASS">
+        <test-method signature="InsuranceMotorcycle()[pri:0, instance:InsuranceCalculator_Motorcycle.EndToEndTest@4b741d6d]" started-at="2023-04-15T21:00:52 IST" name="InsuranceMotorcycle" finished-at="2023-04-15T21:00:57 IST" duration-ms="4799" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InsuranceMotorcycle -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:InsuranceCalculator_Motorcycle.EndToEndTest@5824a83d]" started-at="2023-04-15T18:05:29 IST" name="tearDown" finished-at="2023-04-15T18:05:29 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:InsuranceCalculator_Motorcycle.EndToEndTest@4b741d6d]" started-at="2023-04-15T21:00:57 IST" name="tearDown" finished-at="2023-04-15T21:00:57 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- InsuranceCalculator_Motorcycle.EndToEndTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="InsuranceCalculator_Motorcycle.ErrorHandlingCylinderCapacity_001">
+        <test-method is-config="true" signature="setupMethod()[pri:0, instance:InsuranceCalculator_Motorcycle.ErrorHandlingCylinderCapacity_001@15bb5034]" started-at="2023-04-15T20:59:22 IST" name="setupMethod" finished-at="2023-04-15T20:59:57 IST" duration-ms="35833" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupMethod -->
+        <test-method signature="verifyModelOptionDropdown()[pri:0, instance:InsuranceCalculator_Motorcycle.ErrorHandlingCylinderCapacity_001@15bb5034]" started-at="2023-04-15T20:59:57 IST" name="verifyModelOptionDropdown" finished-at="2023-04-15T20:59:59 IST" duration-ms="1617" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyModelOptionDropdown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:InsuranceCalculator_Motorcycle.ErrorHandlingCylinderCapacity_001@15bb5034]" started-at="2023-04-15T20:59:59 IST" name="tearDown" finished-at="2023-04-15T20:59:59 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- InsuranceCalculator_Motorcycle.ErrorHandlingCylinderCapacity_001 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

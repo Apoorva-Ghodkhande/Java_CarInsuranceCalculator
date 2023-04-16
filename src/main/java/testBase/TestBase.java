@@ -14,6 +14,7 @@ import pageObjects.EnterInsurantDataPageObject;
 import pageObjects.EnterProductDataPageObjects;
 import pageObjects.EnterVehicleDataPageObject;
 import pageObjects.HomePageObjects;
+import pageObjects.SelectPriceOptionsPageObjects;
 import reusableComponents.PropertiesOperations;
 
 public class TestBase extends ObjectRepo {
@@ -27,6 +28,7 @@ public class TestBase extends ObjectRepo {
 		enterVehicleDataPage= new EnterVehicleDataPageObject();
 		enterInsurantDataPage=new EnterInsurantDataPageObject();
 		enterProductDataPage=new EnterProductDataPageObjects();
+		enterPriceOption = new SelectPriceOptionsPageObjects();
 	}
 	
 	public void launchBrowser() throws IOException {

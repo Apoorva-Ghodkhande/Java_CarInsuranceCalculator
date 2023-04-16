@@ -9,6 +9,7 @@ import pageObjects.EnterInsurantDataPageObject;
 import pageObjects.EnterProductDataPageObjects;
 import pageObjects.EnterVehicleDataPageObject;
 import pageObjects.HomePageObjects;
+import pageObjects.SelectPriceOptionsPageObjects;
 import reusableComponents.CommonMethods;
 import reusableComponents.ExtentSetup;
 
@@ -21,6 +22,6 @@ public class ObjectRepo {
 	 public static EnterVehicleDataPageObject enterVehicleDataPage;
 	 public static EnterInsurantDataPageObject enterInsurantDataPage;
 	 public static EnterProductDataPageObjects enterProductDataPage;
-	 
+	 public static SelectPriceOptionsPageObjects enterPriceOption;
 	 public CommonMethods cm= new CommonMethods();
 }

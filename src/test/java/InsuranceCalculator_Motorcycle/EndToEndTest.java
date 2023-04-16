@@ -15,6 +15,7 @@ public class EndToEndTest extends TestBase {
 	 enterVehicleDataPage.enterVehicleData();
 	 enterInsurantDataPage.enterInsurantData();
 	 enterProductDataPage.enterProductData();
+	 enterPriceOption.selectPlanOptionAndClickNext("Silver");
 	}
 	}
 
