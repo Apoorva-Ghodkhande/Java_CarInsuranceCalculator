@@ -46,6 +46,6 @@ public class TestBase extends ObjectRepo {
 	@AfterMethod
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 }
